@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+
+    <div class="container main-container">
+      <h1>Página principal</h1>
+      <div class="form-container">
+        <form action="/users" method="POST" id="userCreateForm">
+          <div class="form-group">
+            <label for="firstname">Nombre</label>
+            <input type="text" class="form-control" id="firstname" name="firstname">
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Apellido</label>
+            <input type="text" class="form-control" id="lastname" name="lastname">
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" name="email">
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+            <div class="invalid-feedback"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+    <script src="/js/validator.js"></script>
+    <script src="/js/userCreateValidator.js"></script>
+  </body>
+</html>
